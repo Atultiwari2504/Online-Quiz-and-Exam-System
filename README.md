@@ -24,8 +24,9 @@ A full-stack web application for conducting quizzes and exams with user authenti
 4. Run Flask server  
 
 ## 📂 Project Structure
-- `/templates` – HTML files  
-- `/static` – CSS & JS  
+- `/` HTML files
+- `/css` CSS
+- `/js` JS
 - `/app.py` – Backend logic  
 
 ## 👥 Team Project
