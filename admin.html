@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Place this at the very top of admin.html, inside the <head> -->
+    <script>
+        (function () {
+            // 1. Check if 'isLoggedIn' exists in localStorage
+            const auth = localStorage.getItem('adminAuth');
+
+            // 2. If it's not there, redirect to login page immediately
+            if (auth !== 'true') {
+                window.location.replace("admin_login.html");
+            }
+        })();
+    </script>
+
+    <div class="topbar">
+        <h2>Admin Panel</h2>
+        <button onclick="logout()"><a class="btn btn-small" href="index.html">Home</a></button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>Add New Question</h3>
+            <input type="text" id="category" placeholder="Category (HTML / CSS / JavaScript)" />
+            <input type="text" id="question" placeholder="Question" />
+            <input type="text" id="opt1" placeholder="Option 1" />
+            <input type="text" id="opt2" placeholder="Option 2" />
+            <input type="text" id="opt3" placeholder="Option 3" />
+            <input type="text" id="opt4" placeholder="Option 4" />
+            <input type="number" id="correctIndex" placeholder="Correct Option Index (0-3)" min="0" max="3" />
+            <button class="btn full" onclick="addQuestion()">Add Question</button>
+        </div>
+
+        <div class="card">
+            <h3>Question List</h3>
+            <div id="questionList"></div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

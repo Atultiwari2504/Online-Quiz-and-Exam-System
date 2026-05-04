@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="topbar">
+        <h2>Quiz Dashboard</h2>
+        <div>
+            <span id="userWelcome"></span>
+            <button class="btn btn-small" onclick="logoutUser()">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>Select a Quiz Category</h3>
+            <div id="categoryList" class="grid"></div>
+        </div>
+
+        <div class="card">
+            <h3>Recent Attempts</h3>
+            <div id="attemptList"></div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            const user = localStorage.getItem("currentUser");
+            if (!user) {
+                window.location.replace("login.html");
+            }
+        })();
+    </script>
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

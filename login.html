@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="page-center">
+        <div class="card auth-card">
+            <h2>Student Account</h2>
+
+            <div class="tabs">
+                <button class="tab active" onclick="showForm('login')">Login</button>
+                <button class="tab" onclick="showForm('register')">Register</button>
+            </div>
+
+            <div id="loginForm" class="form-block">
+                <input type="email" id="loginEmail" placeholder="Email" />
+                <input type="password" id="loginPassword" placeholder="Password" />
+                <button class="btn full" onclick="loginUser()">Login</button>
+            </div>
+
+            <div id="registerForm" class="form-block hidden">
+                <input type="text" id="regName" placeholder="Full Name" />
+                <input type="email" id="regEmail" placeholder="Email" />
+                <input type="password" id="regPassword" placeholder="Password" />
+                <button class="btn full" onclick="registerUser()">Register</button>
+            </div>
+
+            <p class="small-link"><a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

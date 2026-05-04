@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="card">
+        <h3 id="timer">Time: 30s</h3>
+        <h2 id="question"></h2>
+
+        <div id="options"></div>
+
+        <!-- ✅ Navigation Buttons -->
+        <div style="display:flex; gap:10px; margin-top:15px;">
+            <button id="prevBtn" class="btn full" onclick="prevQuestion()">Previous</button>
+            <button id="nextBtn" class="btn full" onclick="nextQuestion()">Next</button>
+            <button id="finishBtn" class="btn full" onclick="finishQuiz()">Finish</button>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/result.js"></script>
+</body>
+
+</html>
